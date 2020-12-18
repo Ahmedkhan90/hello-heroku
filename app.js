@@ -1,4 +1,5 @@
 console.log("Hello World")
+const PORT = process.env.PORT || 5000
 var express = require("express");
 
 var server = express();
@@ -17,6 +18,10 @@ server.get("/berger", (req, res, next) => {
     res.send("here is berger");
 })
 
-server.listen(3000, () => {
-    console.log("server is running on port 3000");
+// server.listen(5000, () => {
+//     console.log("server is running on port 3000");
+// })
+
+server.listen(PORT, () => {
+    console.log("server is running on port: " + PORT);
 })
